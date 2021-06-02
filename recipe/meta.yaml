@@ -1,40 +1,38 @@
 {% set name = "e3sm_to_cmip" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/{{ name }}/archive/v.{{ version }}.tar.gz
-  sha256: 32f1a67c01ec4ede338d06c344829a3a3eb165fbd2552833298768b9482bc32a
+  url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 720804c0a026c2b56350797766132cc455410c6906f9de830a49565c4fffeb55
 
 build:
-  skip: true  # [win or py<36]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - e3sm_to_cmip = e3sm_to_cmip.__main__:main
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python
-    - nco
-    - cmor >=3.5.0
+    - python >=3.7
+    - cmor >=3.6.0
     - cdutil
     - cdms2 >=3.1
-    - progressbar2
-    - pathos
-    - pyyaml
-    - xarray
-    - netcdf4
     - dask
+    - netcdf4
+    - nco
+    - pyyaml
     - scipy
     - tqdm
+    - xarray
 
 test:
   commands:
