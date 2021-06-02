@@ -1,5 +1,5 @@
 {% set name = "e3sm_to_cmip" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2f731b74d107a0bc5ddae6474d18b1f4297654490234ba04c078a8a197687671
+  sha256: f5e1fff95815cec0fae3e371821c763311ef3caf5a26d48f64db89e0bdddb546
 
 build:
   number: 0
@@ -25,7 +25,6 @@ requirements:
     - python >=3.7
     - cmor >=3.6.0
     - cdutil
-    - cdms2 >=3.1
     - dask
     - netcdf4
     - nco
