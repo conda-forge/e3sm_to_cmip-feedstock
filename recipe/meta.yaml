@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/{{ name }}/archive/v.{{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 720804c0a026c2b56350797766132cc455410c6906f9de830a49565c4fffeb55
 
 build:
