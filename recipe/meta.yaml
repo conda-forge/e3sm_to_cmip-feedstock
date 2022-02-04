@@ -18,13 +18,14 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >=3.8
     - cmor >=3.6.0
-    - cdutil
+    - cdms2 3.1.5
+    - cdutil 8.2.1
     - dask
     - netcdf4
     - nco
@@ -32,7 +33,6 @@ requirements:
     - scipy
     - tqdm
     - xarray
-
 test:
   commands:
     - e3sm_to_cmip --help
