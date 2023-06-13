@@ -1,11 +1,11 @@
-About e3sm_to_cmip
-==================
+About e3sm_to_cmip-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/e3sm_to_cmip-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/E3SM-Project/e3sm_to_cmip
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/e3sm_to_cmip-feedstock/blob/master/LICENSE.txt)
 
 Summary: A cli utility to transform E3SM model output into CMIP compatible data.
 
@@ -28,8 +28,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8084&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3sm_to_cmip-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8084&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3sm_to_cmip-feedstock?branchName=main">
       </a>
     </td>
   </tr>
