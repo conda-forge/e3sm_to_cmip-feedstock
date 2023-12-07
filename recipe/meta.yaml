@@ -1,5 +1,5 @@
 {% set name = "e3sm_to_cmip" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8a4ecf34e69f6b36a5ef333220aa3352457dfd678b12ced346e75ad2b784ab59
+  sha256: aa57679782d3b287a560e1a796ac26a4698d11e0400f509351a62f0958bfbacc
 
 build:
   number: 0
@@ -24,15 +24,14 @@ requirements:
   run:
     - python >=3.9
     - cmor >=3.7.0
-    - cdms2 3.1.5
-    - cdutil 8.2.1
     - dask
     - nco >=5.1.4
     - netcdf4
-    - numpy >=1.23.0 # This version of numpy includes support for Python 3.11.
+    - numpy >=1.23.0  # This version of numpy includes support for Python 3.11.
     - pyyaml
     - tqdm
     - xarray >=2022.02.0  # This version of Xarray drops support for Python 3.8.
+    - xcdat >=0.6.0
 
 test:
   commands:
