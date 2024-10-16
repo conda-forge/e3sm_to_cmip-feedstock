@@ -1,5 +1,5 @@
 {% set name = "e3sm_to_cmip" %}
-{% set version = "1.11.2" %}
+{% set version = "1.11.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 874d860facca0683bb336282de4d36d31152e00c35fadab02cda5f475b7771b1
+  sha256: 261ee8e34ac96c6aad23784b0f211a4f4085392cd51d532ef1b3e9a94c14482e
 
 build:
   number: 0
