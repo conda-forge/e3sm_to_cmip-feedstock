@@ -10,7 +10,7 @@ source:
   sha256: 261ee8e34ac96c6aad23784b0f211a4f4085392cd51d532ef1b3e9a94c14482e
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - e3sm_to_cmip = e3sm_to_cmip.__main__:main
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - cmor >=3.7.0
     - dask
     - nco >=5.1.4
@@ -34,6 +34,8 @@ requirements:
     - xcdat >=0.6.0
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - e3sm_to_cmip --help
   imports:
