@@ -28,7 +28,7 @@ requirements:
     - dask
     - nco >=5.1.4
     - netcdf4
-    - numpy >=2.0.0, <3.0.0
+    - numpy >=2.0.0,<3.0.0
     - pyyaml
     - tqdm
     - xarray >=2024.03.0
