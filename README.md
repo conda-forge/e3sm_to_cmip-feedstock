@@ -40,7 +40,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-e3sm_to_cmip-green.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/e3sm_to_cmip.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/e3sm_to_cmip.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/e3sm_to_cmip.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-e3sm__to__cmip-green.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/e3sm_to_cmip.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/e3sm_to_cmip.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/e3sm_to_cmip.svg)](https://anaconda.org/conda-forge/e3sm_to_cmip) |
 
 Installing e3sm_to_cmip
 =======================
