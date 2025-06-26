@@ -1,5 +1,6 @@
 {% set name = "e3sm_to_cmip" %}
-{% set version = "1.11.3" %}
+{% set version = "1.12.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +8,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 261ee8e34ac96c6aad23784b0f211a4f4085392cd51d532ef1b3e9a94c14482e
+  sha256: ff261237dd8a76f976400b2d01ae4f4b49c2d008b7a30a45dfdd046be3f7b2d8
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - e3sm_to_cmip = e3sm_to_cmip.__main__:main
@@ -27,11 +28,11 @@ requirements:
     - dask
     - nco >=5.1.4
     - netcdf4
-    - numpy >=1.23.0  # This version of numpy includes support for Python 3.11.
+    - numpy >=2.0.0, <3.0.0
     - pyyaml
     - tqdm
-    - xarray >=2022.02.0  # This version of Xarray drops support for Python 3.8.
-    - xcdat >=0.6.0
+    - xarray >=2024.03.0
+    - xcdat >=0.8.0
 
 test:
   requires:
