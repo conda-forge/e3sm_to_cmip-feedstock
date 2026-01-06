@@ -1,5 +1,5 @@
 {% set name = "e3sm_to_cmip" %}
-{% set version = "1.13.0" %}
+{% set version = "1.13.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a2137951865a3c5a57fd52b2f2a2a82240dccfb47abc0858929047b4cd3dcdee
+  sha256: 5214c865c2f8be6ad5b94035b81da8d7b57c6332eabfbe301def2345e5214a3b
 
 build:
   number: 0
@@ -26,11 +26,11 @@ requirements:
     - dask
     - nco >=5.1.4
     - netcdf4
-    - numpy >=2.0.0,<3.0.0
+    - numpy >=2.0.0, <3.0.0
     - pyyaml
     - tqdm
     - xarray >=2024.03.0
-    - xcdat >=0.8.0
+    - xcdat >=0.11.1,<1.0.0
 
 test:
   requires:
