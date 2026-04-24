@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python 3.11.*
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
@@ -40,7 +40,9 @@ tests:
       imports:
         - e3sm_to_cmip
       pip_check: false
-      python_version: ${{ python_min }}
+      python_version: 
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
