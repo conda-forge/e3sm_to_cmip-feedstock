@@ -21,7 +21,6 @@ and Tables directories. Test holds the common_user_input.json file which
 can be used as a placeholder for the user supplied metadata, and Tables
 holds all the CMIP6 variable tables.
 
-
 Current build status
 ====================
 
