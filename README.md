@@ -21,7 +21,6 @@ and Tables directories. Test holds the common_user_input.json file which
 can be used as a placeholder for the user supplied metadata, and Tables
 holds all the CMIP6 variable tables.
 
-
 Current build status
 ====================
 
@@ -29,7 +28,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/e3sm_to_cmip-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/e3sm_to_cmip-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -51,31 +52,73 @@ conda config --add channels conda-forge/label/e3sm_to_cmip_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/e3sm_to_cmip_dev` channel has been enabled, `e3sm_to_cmip` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install e3sm_to_cmip
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install e3sm_to_cmip
 ```
 
-It is possible to list all of the versions of `e3sm_to_cmip` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add e3sm_to_cmip
+# for installing globally
+pixi global install e3sm_to_cmip
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `e3sm_to_cmip` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search e3sm_to_cmip --channel conda-forge/label/e3sm_to_cmip_dev
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search e3sm_to_cmip --channel conda-forge/label/e3sm_to_cmip_dev
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search e3sm_to_cmip --channel conda-forge/label/e3sm_to_cmip_dev
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -87,6 +130,8 @@ mamba repoquery whoneeds e3sm_to_cmip --channel conda-forge/label/e3sm_to_cmip_d
 # List dependencies of `e3sm_to_cmip`:
 mamba repoquery depends e3sm_to_cmip --channel conda-forge/label/e3sm_to_cmip_dev
 ```
+
+</details>
 
 
 About conda-forge
