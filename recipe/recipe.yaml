@@ -1,26 +1,29 @@
-{% set name = "e3sm_to_cmip" %}
-{% set version = "1.15.0rc1" %}
+schema_version: 1
+
+context:
+  name: e3sm_to_cmip
+  version: "1.15.0rc1"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/${{ name }}/archive/v${{ version }}.tar.gz
   sha256: b8f9451eca681cf1e6c291faa4fa65013c58a5a65684c68ae80400f236a8a064
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - cmor >=3.7.0
     - dask
     - nco >=5.1.4
@@ -31,18 +34,22 @@ requirements:
     - xarray >=2024.03.0
     - xcdat >=0.11.1,<1.0.0
 
-test:
-  requires:
-    - python {{ python_min }}
-  commands:
-    - e3sm_to_cmip --help
-  imports:
-    - e3sm_to_cmip
+tests:
+  - python:
+      imports:
+        - e3sm_to_cmip
+      pip_check: false
+      python_version: 
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - e3sm_to_cmip --help
 
 about:
-  home: https://github.com/E3SM-Project/e3sm_to_cmip
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
   summary: A cli utility to transform E3SM model output into CMIP compatible data.
   description: |
@@ -53,8 +60,9 @@ about:
     and Tables directories. Test holds the common_user_input.json file which
     can be used as a placeholder for the user supplied metadata, and Tables
     holds all the CMIP6 variable tables.
-  doc_url: https://github.com/E3SM-Project/e3sm_to_cmip
-  dev_url: https://github.com/E3SM-Project/e3sm_to_cmip
+  homepage: https://github.com/E3SM-Project/e3sm_to_cmip
+  repository: https://github.com/E3SM-Project/e3sm_to_cmip
+  documentation: https://github.com/E3SM-Project/e3sm_to_cmip
 
 extra:
   recipe-maintainers:
