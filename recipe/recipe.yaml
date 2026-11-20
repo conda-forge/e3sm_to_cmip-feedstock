@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: e3sm_to_cmip
-  version: "1.14.0"
+  version: "1.15.0"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: 5355f515f171bccadd664525c74470fdc269dda05caad93ded5952026a6b198d
+  sha256: 77c79efb59d28d07191baacd35bff98aee098ee791ccd4c0dbc3e90a7e9e7ed6
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -40,7 +40,7 @@ tests:
       imports:
         - e3sm_to_cmip
       pip_check: false
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
         - "*"
   - requirements:
