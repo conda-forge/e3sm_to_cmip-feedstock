@@ -21,18 +21,19 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
+    - setuptools >=42
+    - wheel
   run:
     - python >=${{ python_min }}
     - cmor >=3.7.0
-    - dask
-    - nco >=5.1.4
+    - dask-core
     - netcdf4
     - numpy >=2.0.0,<3.0.0
     - pyyaml
     - tqdm
     - xarray >=2024.03.0
-    - xcdat >=0.11.1,<1.0.0
+    - xcdat >=0.11.1
+    - nco >=5.1.4
 
 tests:
   - python:
